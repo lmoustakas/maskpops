@@ -1,0 +1,63 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: clashresolved.aux
+The style file: apj.bst
+Database file #1: clashresolvedNotes.bib
+Database file #2: /Users/leonidas/Dropbox/bibdesk/moustakasbibs.bib.bib
+Warning--I didn't find a database entry for "Bell:00"
+Warning--I didn't find a database entry for "Ivezic:08"
+Warning--I didn't find a database entry for "Zaritsky:94"
+Warning--I didn't find a database entry for "Ferguson:2004qw"
+Warning--I didn't find a database entry for "Moustakas:1998tn"
+Warning--I didn't find a database entry for "bunker:00"
+Warning--I didn't find a database entry for "walsh:79"
+Warning--I didn't find a database entry for "ratnatunga:99"
+Warning--I didn't find a database entry for "moustakas:07"
+Warning--I didn't find a database entry for "cabanac:07"
+Warning--I didn't find a database entry for "marshall:09"
+Warning--I didn't find a database entry for "warren:96"
+Warning--I didn't find a database entry for "bolton:08"
+Warning--I didn't find a database entry for "bolton:06"
+Warning--I didn't find a database entry for "ebeling:01"
+You've used 1 entry,
+            2948 wiz_defined-function locations,
+            705 strings with 5761 characters,
+and the built_in function-call counts, 467 in all, are:
+= -- 38
+> -- 28
+< -- 0
++ -- 10
+- -- 9
+* -- 40
+:= -- 92
+add.period$ -- 1
+call.type$ -- 1
+change.case$ -- 7
+chr.to.int$ -- 1
+cite$ -- 1
+duplicate$ -- 19
+empty$ -- 28
+format.name$ -- 12
+if$ -- 87
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 1
+newline$ -- 7
+num.names$ -- 4
+pop$ -- 8
+preamble$ -- 1
+purify$ -- 7
+quote$ -- 0
+skip$ -- 16
+stack$ -- 0
+substring$ -- 21
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 9
+warning$ -- 0
+while$ -- 4
+width$ -- 0
+write$ -- 13
+(There were 15 warnings)

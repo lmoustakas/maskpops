@@ -1,0 +1,340 @@
+\message{ !name(clashresolved.tex)}\documentclass{emulateapj}
+\usepackage{natbib}
+%\usepackage{color}
+%\usepackage{xspace}
+\citestyle{aa}
+
+\shorttitle{Galaxy Formation Models \& Spatially Resolved Stellar Populations} 
+\shortauthors{Moustakas et al.}
+
+\begin{document}
+
+\message{ !name(clashresolved.tex) !offset(-3) }
+
+\bibliographystyle{apj}
+
+\submitted{Submitted to Astrophysical Journal}
+
+%\def\ltsima{$\; \buildrel < \over \sim \;$}
+%\def\lsim{\lower.5ex\hbox{\ltsima}}
+%\def\gtsima{$\; \buildrel > \over \sim \;$}
+%\def\gsim{\lower.5ex\hbox{\gtsima}}
+
+\title{Mapping Galaxy Formation Stories in Distant Spatially Resolved Strongly Lensed Galaxies} 
+
+\author{Leonidas A. Moustakas\altaffiltext{1}}
+\author{Genevieve Graves\altaffiltext{2}}
+\author{John Moustakas\altaffiltext{3}}
+\altaffiltext{1}{JPL}
+\altaffiltext{2}{UC Berkeley}
+\altaffiltext{3}{UCSD}
+
+\begin{abstract}
+An abstract here. 
+\end{abstract}
+\keywords{gravitational lensing}
+
+\section{Introduction} 
+
+% (\citealt{bunker:00})
+
+
+Gradients in Spiral Galaxies
+
+Metallicity gradients: I think it is pretty well established that
+spiral galaxies have substantial metallicity gradients, with
+metal-rich centers and metal-poor outer parts.  People have done this
+looking at stellar metallicity gradients with colors in other galaxies
+\citep[e.g.][]{Bell:00}, with stellar spectra in our own galaxy
+\citep[e.g.][]{Ivezic:08}, and by mapping the metallicity gradients
+of HII regions in star-forming galaxies \citep[e.g.][]{Zaritsky:94}. 
+  
+Age gradients: There are multiple studies that suggest that spirals
+also have significant age gradients, with older stars in the center
+and younger stars in the outer parts.  e.g., Bell \& de Jong (2000)
+fit SEDs to radially resolved optical and near-IR photometry and find
+the centers of galaxies to be old and metal-rich, while the outer
+parts are younger and more metal-poor.  Kauffmann et al. (2006) find
+that many massive bulge-dominated galaxies have blue outer regions,
+which appear to show residual star formation even after star formation
+has ceased in the inner part of the galaxy.
+
+Gradients in Early Type Galaxies
+
+
+\citep{Somerville:2003aa}\citep{Ferguson:2004qw}
+
+\citep{Moustakas:1998tn}
+
+Metallicity gradients: It is well-established that early type galaxies
+show strong metallicity gradients, with metal-rich centers and
+metal-poor outer parts.  The SAURON team (Scott, Cappellari et
+al. 2009) recently published this in an interesting and somewhat novel
+way---plotting [Z/H] as a function of the local escape velocity in the
+galaxy (essentially a radial gradient, with high Vesc in the center).
+There are many other studies that show similar things, both with
+spectral absorption line strengths and colors.
+
+Age gradients: These are more debated.  The Scott et al. (2009) paper
+mentioned above find age gradients that are flat in some galaxies,
+while other show youngish central ages and older ages farther out.
+Another relevant paper is Sanchez-Blazquez et al. (2007), who find
+weak or no age gradient in 10/11 early types, while one have a very
+young center.  Interestingly, the weak positive age gradients,
+combined with the negative metallicity gradients, means that the
+age-metallicity degeneracy acts to keep galaxy color (and
+line-strength) gradients weaker than they otherwise might be.
+
+Abundance ratio gradients: There do not seem to be strong [alpha/Fe]
+gradients in early types.  In the papers quoted above, Scott et
+al. (2009) find no [alpha/Fe] gradients and Sanchez-Blazquez et
+al. (2007) find no gradients, weak positive gradients, or weak
+negative gradients in their galaxies.
+
+Gradients beyond the half-light radius: In general, these studies do
+not go beyond the half-light radius of the galaxy.  Some work that I
+am doing right now tracing stellar population gradients out to 2-3
+Reff essentially agrees with these studies: Age gradients vary from
+galaxy-to-galaxy, are usually weak, but with some galaxies showing
+young cores.  All galaxies show strong negative gradients in total
+metallicity.  [alpha/Fe] varies little with radius.  Interestingly,
+carbon-enhancement ([C/Fe]) seems to scale strongly with
+radius---galaxies have much higher [C/Fe] in their centers that in
+their outskirts.
+
+At high redshift -- stuff happens. 
+
+It is of course much harder to study population gradients at high
+redshift.  Rigby et al. (2011) and Wuyts et al. (2010) have SEDs and
+spectroscopy for a lensed galaxy at z=1.7, but don't try to extract
+spatially-resolved information.  There was a Rigby HST proposal in
+Cycle 18 to do resolved SED fitting for a lensed arc (might well be
+the same one) which I think got time, but I don't see the paper out
+yet.
+
+Theory
+
+Spiral galaxies: I don't know much about formation models for spiral
+galaxies.  Bell \& de Jong (2000) propose a scenario in which star
+formation happens early and rapidly in high-density regions of the
+galaxy (i.e., the center) and proceeds more slowly out at large radius
+where the gas densities are low, hence leaving low-lever star
+formation in the outer parts of the galaxy at late times.  There is a
+huge literature on the Milky Way star formation history and detailed
+chemical evolution models with which I am not very familiar.  Some
+names that spring to mind are Brad Gibson, Rok Roskar, Daisuke Kawata,
+Chiaki Kobayashi.  I'm sure I'm missing some big ones.
+
+Early-type galaxies: There are limited numbers of chemical evolution
+models for early type galaxies (Gibson et al. 2007, Pipino et
+al. 2010), and they tend to be trying to reproduce existing
+observations, not making strong new predictions.  An interesting
+recent paper is Oser et al. (2010).  They model massive early type
+galaxies using a hydro-code super-posed on a zoom-in of a cosmological
+N-body simulation.  Their galaxies wind up containing two
+sub-populations of stars, those that formed "in situ" in the massive
+halo, and those that formed in satellites outside Rvir of the main
+halo, which were then accreted at later times.  The in situ stars
+dominate the central part of the galaxy, while the accreted stars wind
+up at much higher radius, thus setting up a strong gradient in the
+origin of the stars.  Interestingly, both the in situ stars and the
+accreted stars tend to be old.  There is often a little dribble of
+residual in situ star formation in their models of less massive
+galaxies, which would tend to make the central population younger.
+Also, you'd expect strong differences in the metallicities of the two
+components, with the in situ stars showing much higher metallicities
+than those that were accreted from small satellites, due to the
+mass-metallicity relation and the greatly reduced ability of small
+galaxies to hold onto metal-enriched SN ejecta.
+
+
+The power of strong gravitational lensing as a tool towards a broad
+range of astrophysical discoveries. (Reference to some lensing school
+notes, eg the Saas Fee lectures). The lensing object (REF), magnified
+background sources (\citealt{bunker:00}), and indeed for cosmology
+(Coe \& Moustakas, submitted). Lots of references here for background,
+nothing too profound.
+
+To these ends, since the first strong lens was discovered by
+\citet{walsh:79}, both serendipity and systematic programs have
+uncovered several hundred strong lenses by the present day. Broadly
+speaking, these have been found through one of two techniques, whether
+serendipitous or through a structured and pre-determined strategy. The
+first exploits the remarkable visual geometry of lenses in space- or
+ground-based imaging data (e.g. MDS \citet{ratnatunga:99}, EGS
+\citet{moustakas:07}, SL2S \citet{cabanac:07}, HAGGLeS
+\citet{marshall:09}). The second is spectroscopic, and relies on the
+observation of ``anomalous'' spectroscopic features.
+
+This latter approach was pioneered by \citet{warren:96}, and has come
+to spectacular fruition by the Sloan Lens ACS (SLACS) Survey
+\citep{bolton:08}, which has confirmed some one hundred new strong
+galaxy-galaxy lenses by \emph{Hubble} imaging follow-up to
+spectroscopically identified candidates.  While the efficiency
+afforded by the Sloan spectroscopic database is high, lenses have been
+uncovered through regular ground-based spectroscopic observations
+(e.g.~\citealt{bolton:06}).  In this paper we report on similarly
+discovered lenses, in several distant galaxy clusters, which all
+happen to be from the X-ray flux-limited Massive Cluster Survey (MACS)
+sample of \citet{ebeling:01}. 
+
+The observations are described in the following section, followed by a
+more detailed presentation of the lenses and the available data.  We
+end with a discussion of the lensing rates implied by these
+discoveries, how other surveys may fare, and the general utility of
+such lenses. All magnitudes are given in AB, and where relevant we
+adopt a concordance cosmology. 
+
+\begin{center}
+\begin{table*}[t]
+\begin{center}
+%\scriptsize
+\caption{\label{tab:data}}
+\begin{tabular}{cccccccc}
+\hline\hline
+\multicolumn{1}{c}{RA} & 
+\multicolumn{1}{c}{Dec} & 
+\multicolumn{1}{c}{Cluster} & 
+\multicolumn{1}{c}{$m_{\rm filter}$} &
+\multicolumn{1}{c}{$\theta_{\rm E}$} & 
+\multicolumn{1}{c}{$z_{\rm lens}$} & 
+\multicolumn{1}{c}{$z_{\rm source}$}&
+\multicolumn{1}{c}{Notes}\\
+%%
+\multicolumn{2}{c}{J2000} & 
+\multicolumn{1}{c}{} & 
+\multicolumn{1}{c}{AB} & 
+\multicolumn{1}{c}{arcsec} & 
+\multicolumn{1}{c}{} & 
+\multicolumn{1}{c}{} & 
+\multicolumn{1}{c}{}\\
+\hline
+00:25:23.487 & $-$12:19:42.8 & MACS\,J0025.4$-$1222  & $30.0$                  & $1.0\pm0.3$ & 0.582 & 2.047 & \\
+17:20:06.416 & $+$35:35:26.3 & MACS\,J1720.3$+$3536 & $r_{\rm SDSS}=20.6$ & $1.0\pm0.3$ & 0.384 & 2.132 & \\
+17:20:18.486 & $+$35:37:12.8 & MACS\,J1720.3$+$3536 & $r_{\rm SDSS}=19.1$ & $1.0\pm0.3$ & 0.385 & 2.787 & \\
+21:29:19.973 & $-$07:42:18.2 & MACS\,J2129.4$-$0741 & $r_{\rm SDSS}=21.6$  & $1.0\pm0.3$ & 0.594 & 1.211 & AGN Source\\
+\end{tabular}
+\end{center}
+\end{table*}
+\end{center}
+
+
+\section{Observations}
+
+The data presented here are drawn from the ``cosmic chronometer''
+project, which aims to make a new measurement of the expansion history
+of the universe through the age-redshift relation.  To that end, many
+galaxies have been spectroscopically targetted at high signal to
+noise, for deriving precise stellar population ages
+\citet{jimenez:04}.  Since the goal is to measure the upper age
+envelope as a function of redshift, the targets are predominantly old,
+red galaxies in galaxy clusters at $0.17<z<0.92$.  The full dataset is
+presented in Stern et al.~(in prep).  All of the observations were
+made with the Low Resolution Imaging Spectrometer (LRIS;
+\citealt{oke:95}) on Keck~I.
+
+\section{The Strong Lenses}
+
+Brief preamble. Subsections on each lens, with data presented. With
+the spec-only lenses, estimate the einstein radius based on the
+emission features' positions. Dwell on the baby bullet lens, which has
+HST data, and for which we can build a full lens model. Main features
+etc.
+
+\subsection{L0025-1219 in MACS\,J0025.4$-$1222} 
+
+This galaxy cluster is an interesting system of two merging
+subclusters \citep{bradac:08}, with some analogies to the original
+Bullet Cluster (1E\,0657$-$56; \citealt{clowe:06},
+\citealt{bradac:06}). 
+
+This lens, properties, magnitude, spectroscopic
+discovery figure, fidelity of observations and conclusions. Hubble
+imaging details, give in a Table for conciseness. Magnitudes from
+galfit modeling. Lens model parameters chosen, importance in terms of
+degeneracies or robustness. Conclusions that can reasonably be drawn
+from the lens modeling. How does this fit in with other work done in
+this cluster?
+
+\subsection{L1720+3535 in MACS\,J1720.3$+$3536}
+ 
+Stuff on the spec detection of this one, einstein radius estimates,
+particular features and whatnot. Is the extra convergence by the
+cluster pretty clearly evident? Estimated position and distance from
+center of cluster, based on where the target is. Some simple diagram
+or plot of its position?
+
+\subsection{L1720+3537 in MACS\,J1720.3$+$3536}
+
+Similar to the previous section. Distance from central position, both
+angular and projected physical. Estimated einstein radius. Does that
+radius jive with the simple properties of the lens galaxy, or is the
+extra convergence from the cluster pretty self-evident?
+
+\subsection{L2129-0742 in MACS\,J2129.4$-$0741}
+
+The archival HST imaging of this spectroscopically identified lens
+candidate (program 9722) shows it unambiguously as a {\bf short-axis
+  cusp} lens.  A simple lens model is calculated with gravlens
+\citep{keeton:01} and is presented in [FIGURE/SHOWCASE]. By and by,
+the time delays between the images are estimated to be YYY. From the
+spectroscopy (Figure~\ref{fig:xx}), the lensed source is a Type~II
+AGN, and [given brightness could be a lens-monitoring candidate of
+particular interest, due to the brightness and to the many
+spectroscopic features accessible in the optical window. 
+
+It is interesting to note that observations (from program 10493), missed
+covering this lens by less than an arc minute.  
+
+\section{Discussion}
+
+What good are such lenses? The fact that they are in galaxy clusters,
+and particularly off-center, means that with high quality high
+resolution imaging, they can provide otherwise inaccessible
+information about the local surface density (the convergence) and the
+orientation and strength of the local tidal field (the shear). Several
+such bits of information could become an important third component in
+the mass profile reconstruction of galaxy clusters, joining weak
+lensing shear (through distortions of many background galaxies) and
+strong lensing by the full cluster potential (cluster arcs).  
+
+As a particular example, talk through the baby bullet cluster, and
+need for synthesis of complementary tracers of the mass and mass
+profile. 
+
+By the nature of the parent survey, an accurate determination of the
+lensing rate is not really possible with the current project, as would
+be possible with a systematically undertaken ``complete'' survey such
+as with SDSS \citep[e.g][]{dobler:08}.  Noting that the targets were
+predominantly bright and luminous red early-type galaxies, the numbers
+are XXXXX.  [Work through the probability numbers for
+lenses. Considering the ``bias'' towards red luminous galaxies in the
+targetted objects, what sort of surface density does this correspond
+to?  Compare with the ``high-density'' numbers from the Treu SLACS
+paper.]
+
+This kind of work argues for the potential of large-scale
+spectroscopic surveys towards the serendipitous discovery of strong
+lenses.  Prospects for future lenses discovered spectroscopically in
+similar high density environments, eg by BOSS (SDSS3), and WFMOS or
+BigBOSS. 
+
+Another lesson that may be taken from this work would be to encourage
+much wider high-resolution observations around galaxy clusters.
+[Especially if the work done shows that there is a pretty significant
+convergence boost!].  [arguments towards supporting extensive
+wide-field surveys of clusters, e.g. in the WFC3 era! good leverage
+for multi cycle proposal.]. 
+
+\acknowledgements
+
+This work was carried out at Jet Propulsion Laboratory, California
+Institute of Technology, under a contract with NASA.  LAM acknowledges
+support by the NASA ATFP program.
+
+\bibliographystyle{apj}
+\bibliography{/Users/leonidas/Documents/fullbibdesk}
+
+\end{document}
+
+\message{ !name(clashresolved.tex) !offset(-340) }

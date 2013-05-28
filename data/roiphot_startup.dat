@@ -1,0 +1,20 @@
+# 1 rootname
+# 2 redshift
+# 3 cluster
+# 4 datestamp
+# 5 scaledir 
+#macs1206_snake_blueside   1.036 macs1206 20110815 scale_65mas
+#macs1206_snake_redside    1.036 macs1206 20110815 scale_65mas
+macs1206_snake_blueside   1.036 macs1206 20110815 scale_30mas
+macs1206_snake_redside    1.036 macs1206 20110815 scale_30mas
+macs1206_snake_blueside   1.036 macs1206 20110815 scale_native
+macs1206_snake_redside    1.036 macs1206 20110815 scale_native
+#macs1206_snake_total      1.036 macs1206 20110815 scale_65mas
+#macs1206_snake_knots      1.036 macs1206 20110815 scale_65mas
+#macs1206_snake_interknots 1.036 macs1206 20110815 scale_65mas
+#macs1206_snake_total      1.036 macs1206 20110815 scale_30mas
+#macs1206_snake_knots      1.036 macs1206 20110815 scale_30mas
+#macs1206_snake_interknots 1.036 macs1206 20110815 scale_30mas
+#macs1206_snake_total      1.036 macs1206 20110815 scale_native
+#macs1206_snake_knots      1.036 macs1206 20110815 scale_native
+#macs1206_snake_interknots 1.036 macs1206 20110815 scale_native

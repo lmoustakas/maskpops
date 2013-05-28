@@ -1,0 +1,53 @@
+17 May 2012
+
+############################################
+* roiphot.py
+Routine that does the photometry. Needs the Archive to be
+mounted. Give as an argument a filename that has sextractor format
+with this info: 
+
+# 1 rootname
+# 2 redshift
+# 3 cluster
+# 4 datestamp
+# 5 scaledir 
+#macs1206_snake_blueside   1.036 macs1206 20110815 scale_65mas
+#macs1206_snake_redside    1.036 macs1206 20110815 scale_65mas
+macs1206_snake_blueside   1.036 macs1206 20110815 scale_30mas
+<etc>
+
+The rootnames are those produced from e.g. splitreg.py, but with the
+".reg" removed.  It makes sense to put this particular file together
+manually, to ensure the that appropriate datasets are being used
+properly.
+
+############################################
+* splitreg.py
+After a set of regions have been defined by working directly in ds9,
+and assuming that we have named each region, split the large reg file
+into individual ones as expected by my roiphot routine.
+
+############################################
+* oletoreg.py
+Convert generic 'id ra dec' file to a proper ds9 region file. 
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+NOTES
+
+Things to deliberate on:
+
+* PSF adjustments, or at least estimate level of systematic effect of
+  not making the appropriate correction.  One possible approach could
+  be to convolve all higher quality imaging such that everything is
+  like the coarsest PSF, measure the photometry, and compare to the
+  untouched photometry.
+
+* Color effects from BCG and cluster galaxy backgrounds. Best solution
+  is to work with images that have those subtracted off.
+
+ => Need imaging mosaics with BCGs subtracted off in all bands.
+ Semi-automate the process.
+
+ => Also need PSFs for all bands. Re-try PSFEx. 
+

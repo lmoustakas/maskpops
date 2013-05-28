@@ -1,0 +1,417 @@
+%\documentclass[11pt]{article}
+\documentclass[preprint,12pt]{aastex}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\setlength\topmargin{0in}
+\setlength\headheight{0in}
+\setlength\headsep{0in}
+\setlength\textheight{9in}
+\setlength\textwidth{6.5in}
+\setlength\oddsidemargin{0in}
+\setlength\evensidemargin{0in}
+\setlength\headheight{20pt}
+\setlength\headsep{0in}
+\setlength{\parindent}{0.5in}
+\setlength{\parskip}{0.0in}
+
+\begin{document}
+
+
+
+\title{SED Fitting of Lensed Galaxies in CLASH \\ Project Outline}
+
+\def\abstractname{}% Don't label the abstract.
+\begin{abstract}
+
+The goal of this project is to characterize the stellar populations of
+high-redshift lensed galaxies and contrast them with a lower-redshift
+comparison sample.  By separately fitting the SEDs of spatially
+resolved galaxy segments, we aim to characterize the distribution of
+star formation in high-z galaxies, identify passively evolving stellar
+components, and if possible compare the metallicities of the various
+components to identify the source of the star-forming gas.  In a
+separate but similar project, we will use lensed, edge-on star-forming
+galaxies with clear dust lanes to characterize the dust absorption
+spectrum in these galaxies.  For both projects, we will make use of
+the full set of 16-band HST photometry that is being acquired by the
+CLASH collaboration.
+
+The tasks described in \S\ref{targets}-\ref{apertures} are necessary
+for both projects.  The SED-fitting project with further require
+running the ISEDFIT model of J. Moustakas in order to obtain stellar
+population information.  In contrast, the dust-SED fitting will be an
+empirical comparison of the dust-obscured and non-dust-obscured
+regions of individual galaxies, and therefore does not require the use
+of ISEDFIT.  I (G. Graves) therefore propose that the SED-fitting
+project be led by L. \& J. Moustakas, while the dust-SED project be
+led by myself, but this is of course open to discussion and may evolve
+as the project progresses.
+
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%% Target Selection!! %%%%%%%%%%%%%%%%%%%
+
+\section{Target Selection}\label{targets}
+
+We need to identify lensed sources that are bright enough and extended
+enough for resolved SED analysis.  Targets should also have
+spectroscopic redshifts.  Two types of targets are particularly of
+interest: those with obvious clumpy structures that are ideal for
+resolved SED fitting, and those that appear to be lensed edge-on
+star-forming galaxies with strong dust lanes.
+
+Genevieve has made a first pass at identifying candidates for
+analysis.  She combined the available spec-z catalogs with the HST
+images (using the 30mas scale images when available) for all clusters
+that currently have both spec-z's and reduced HST imaging.  These
+include the following clusters: Abell 383, Abell 2261, MACS 1149, MACS
+1206, MACS 2129, and RXJ 1347.  Of these, Abell 2261 and MACS 2129 did
+not have any spec-z measurements for arcs, only for cluster members.
+Candidate targets are listed in Table \ref{candidate_tab} and
+illustrated with thumbnails in Figure \ref{candidate_fig}.  
+
+\begin{deluxetable}{lrrrl}
+\tabletypesize{\scriptsize}
+\tablecaption{Candidate Targets\label{candidate_tab}}
+\tablewidth{0pt}
+\tablehead{
+\colhead{Cluster} &
+\colhead{$z$\tablenotemark{*}} &
+\colhead{RA} &
+\colhead{$\delta$} &
+\colhead{Notes}
+}
+\startdata
+{\bf{Abell 383}}  &1.010   &42.00985  &-3.53102  &Long, extended arc
+with clumpy sub-structure \\
+{\bf{Abell 383}}  &2.550   &42.00908  &-3.53347  &Multiply imaged
+extended blue arc, clumpy \\
+\hline 
+{\bf{MACS 1149}}  &1.491  &177.39698  &22.39601  &Spiral galaxy
+smeared throughout the cluster \\
+{\bf{MACS 1149}}  &1.894  &177.40605  &22.39247  &Small multiply
+imaged galaxy.  Looks like it has a central bulge and a disk, \\
+&&&&both blue.  Could also be a disk + bright star-forming knot. \\
+{\bf{MACS 1149}}  &2.497  &177.39284  &22.40323  &Multiply-lensed,
+relatively bright.  Possibly a clumpy disk. \\
+\hline 
+{\bf{MACS 1206}}  &1.033  &181.54473  &-8.80121  &Very large, bright
+star-forming galaxy with strong dust lane \\
+{\bf{MACS 1206}}  &1.036  &181.54701  &-8.79536  &Extended, bright
+star-forming galaxies with strong dust.  Possibly another \\
+&&&&image of the galaxy above?   \\
+{\bf{MACS 1206}}  &1.033  &181.54452  &-8.78765  &Clumpy, reddish
+galaxy with distinct knots and possible tidal tails. \\
+{\bf{MACS 1206}}  &2.538  &181.55238  &-8.79536  &Stripey star-forming
+galaxy with strong dust lanes.  Lensed and very extended.  \\
+{\bf{MACS 1206}}  &1.008  &181.57103  &-8.80168  &Patchy red and blue
+galaxy.  Not sure if it is lensed.  \\
+{\bf{MACS 1206}}  &3.030  &181.56281  &-8.79589  &Patchy blue galaxy.
+Another patch with $z=3.035$ right next to it.  \\
+{\bf{MACS 1206}}  &3.038  &181.56055  &-8.80902  &Two more patchy blue
+galaxies, one at $z=3.038$ and one at $z=3.034$.  Possibly \\
+&&&&multiple images of the galaxy above?   \\
+\hline 
+{\bf{RXJ 1347}}   &0.785  &206.87964  &-11.74411  &Red lensed galaxy
+with a small blue dot/clump.  Possibly a cosmic ray?  \\
+{\bf{RXJ 1347}}   &0.806  &206.88336  &-11.74501  &Star-forming galaxy
+with dust lanes and blue clumps. \\
+{\bf{RXJ 1347}}   &0.906  &206.89103  &-11.74740  &Relatively smooth
+lensed galaxy with an exponential light profile.  Maybe not \\
+&&&&so interesting.  \\
+{\bf{RXJ 1347}}   &{\it{1.700}}  &206.88742  &-11.75761  &Lensed,
+smooth light profile, odd pinky-blue color (star formation plus dust?)
+\\
+{\bf{RXJ 1347}}   &{\it{1.750}}  &206.88255  &-11.76426  &Lensed
+star-forming galaxy, bright center, possible dust lane.  \\
+{\bf{RXJ 1347}}   &{\it{1.750}}  &206.87200  &-11.76108  &Strongly
+lensed, extended arc, blue clumps and dust.  \\
+{\bf{RXJ 1347}}   &{\it{2.500}}  &206.87204  &-11.76534  &Extended low
+surface brightness arc, very red and smooth \\
+{\bf{RXJ 1347}}   &{\it{3.000}}  &206.87355  &-11.76827  &Bright,
+compact, stronly lensed.  
+\enddata
+\tablenotetext{*}{Redshifts in italics may be unreliable.  They are
+  rounded off to the nearest 0.05 and seem to cluster at similar
+  values.  We need to check these.}
+\end{deluxetable}
+
+\vspace{0.08in}
+\noindent{\bf{Ingredients:}}\vspace{-0.1in}
+\begin{enumerate}\itemsep-6pt
+\item{HST detection image of each cluster.}
+\item{Color images of each cluster (e.g., the beautiful new press
+  release images).}
+\item{Catalogs of spectroscopic redshifts and target coordinates.}
+\end{enumerate}
+
+\noindent{\bf{Tasks:}}\vspace{-0.1in}
+\begin{enumerate}\itemsep-6pt
+\item{Put the spec-z catalogs into the format of DS9 *.reg files.}
+\item{Identify lensed background sources that have spec-z's.  Focus on
+those with interesting clumpy features, light distributions, or dust
+lanes.} 
+\item{Follow up with other team members about the source of the
+  suspect spec-z's in RXJ 1347.}
+\item{Create a ranked list of candidates for analysis.}
+\item{When final targets are chosen, double-check the source of the
+  spec-z to make sure the redshift is correct and reliable.}
+\end{enumerate}
+
+
+\begin{figure}[!t]
+\includegraphics[width=1.0\linewidth]{candidates.eps}
+\caption{Candidate targets for SED analysis, sorted by redshift.  For
+  each candidate, the lensing cluster and redshift are indicated.
+  More information about each candidate can be found in Table
+  \ref{candidate_tab} including coordinates for locating each source.}
+\label{candidate_fig}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%% Imaging Data!! %%%%%%%%%%%%%%%%%%%
+
+\section{Imaging Data}\label{imaging}
+
+We will use the CLASH multi-band images that have been matched,
+registered, and resampled to a common 30mas pixel grid.  Our SED
+analysis measures the relative fluxes in different bands over matched
+apertures; it is critical to have well-matched apertures in all
+filters.  Apertures will be defined in the summed ``detection''
+images, then applied in each individual filter.
+
+The existing images have been resampled to a common scale, but have
+different intrinsic resolution due to PSF variations.  To make a fair
+comparison between the various filters without aperture problems, we
+will convolve the higher resolution (compact PSF) images to match the
+lowest resolution images in our filters.  {\bf{Open question:}} How do
+we want to do the error analysis?  Do we need to make some kind of
+error map and track the correlated errors generated by the PSF
+convolution?
+
+Background contamination from the BCG and other cluster members may be
+a problem.  It might be best to do the final analysis on images in
+which the BCG and other bright cluster members have been modeled and
+subtracted.  Leonidas has suggested that Sara Ogaz's thumbnails of
+individual galaxies and their GALFIT models might be useful here.  One
+possibility is to add this to the InterCLASH interactive tool that he
+and James Davies developed over the summer.  We may also want to make
+use of Marc Postman's careful fits to the extended BCG light.
+
+\vspace{0.08in}
+\noindent{\bf{Ingredients:}}\vspace{-0.1in}
+\begin{enumerate}\itemsep-6pt
+\item The 16 individual drizzled images for each cluster containing a
+  target.  {\bf{NOTE:}} 30mas images do not yet exist for all observed
+  clusters! 
+\item The weight map for each image.
+\item The PSF (average over the field of view? as a function of
+  location?) for each individual filter.
+\item Sara's thumbnail images and GALFIT model fits to individual
+  cluster members.
+\item Marc's extended BCG fits for careful background subtraction.
+\end{enumerate}
+
+\noindent{\bf{Tasks:}}\vspace{-0.1in}
+\begin{enumerate}\itemsep-6pt
+\item Obtain the PSF for each filter.  
+\item Convolve the images to a common effective resolution.
+\item Construct error maps that treat the correlated errors from
+  drizzling and PSF convolution in a reasonable way.
+\item Implement a way to create images in which the BCG and other
+  bright cluster members have been subtracted.  Create these images
+  and use them (instead of? in addition to?) the raw images
+  themselves.
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%% A.U.S. (Apertures of Unusual Size) %%%%%%%%%%%%%%%%%
+
+\section{Apertures of Unusual Size/Shape}\label{apertures}
+
+Once the images have been resampled onto matching pixel grids and
+convolved to have the same effective resolution, we can define
+apertures of any size or shape by designating which pixels should be
+included in each aperture.  This process involves deciding where to
+draw the boundaries for each aperture, producing a list of pixels that
+belong in each aperture, then computing the summed flux and
+corresponding error values for each filter in each aperture.
+
+Chien Peng has written tools that will be useful for this.  There are
+two relevant programs.  The first, {\it{ds9poly.c}}, is a tool for
+defining polygons interactively in DS9.  The second,
+{\it{fillpoly.f}}, takes the polygon output from ds9poly and produces
+a list of coordinates for all of the pixels that fall inside that
+polygon.  A description of these tools can be found here on his ``Bad
+Pixel Masking FAQ'' page:
+
+\begin{center}\vspace{-0.1in}
+http://users.obs.carnegiescience.edu/peng/work/galfit/MASKING.html
+\end{center}
+
+Once apertures have been defined and the pixels corresponding to each
+aperture have been tabulated, we can sum the flux in the constituent
+pixels for each aperture and compute errors on the summed aperture
+fluxes.  {\bf{NOTE:}} We have to figure out how to deal with the
+correlated errors in adjascent pixels due to drizzling and PSF
+convolution.  
+
+\vspace{0.08in}
+\noindent{\bf{Ingredients:}}\vspace{-0.1in}
+\begin{enumerate}\itemsep-6pt
+\item {The routines {\it{ds9poly.c}} and {\it{fillpoly.f}} from Chien
+  Peng's website.}
+\item {Re-sampled, PSF convolved, (possibly BCG and cluster member
+  subtracted) images for the cluster in each filter.}
+\item {Error maps for each filter(?).}
+\end{enumerate}
+
+\noindent{\bf{Tasks:}}\vspace{-0.1in}
+\begin{enumerate}\itemsep-6pt
+\item {Download, install, and test {\it{ds9poly.c}} and
+  {\it{fillpoly.f}}.}
+\item {Choose apertures.}
+\item {Run {\it{ds9poly}} and {\it{fillpoly}} to create pixel lists
+  for each aperture.}
+\item {Write an IDL code to take the 16 input *.fits images and
+  aperture pixel lists and produce summed fluxes and errors in each
+  band for each aperture.}
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%% Stellar Population SED Fitting %%%%%%%%%%%%%%%%%
+
+\section{Stellar Population SED Fitting}\label{SED_fit}
+
+The first project goal is resolved SED fitting of stellar populations
+in lensed galaxies.  This project may present the resolved fitting of
+invidual objects on their own, or may aggregate the properties of many
+objects to study resolved stellar populations at several different
+redshifts.  
+
+Once 16-band photometry has been computed in a given aperture, we will
+use John's ISEDFIT code to fit the aperture SEDs.  Currently, John's
+code is set up to run grids for several different stellar population
+models: Bruzual-Charlot 2003, Maraston 2005, and Conroy's Flexible
+Stellar Population Synthesis (FSPS).  Comparing results from the
+various models will help constrain the systematics of using different
+underlying models.  
+
+There are several quantities of interest in the model results.  The
+models will measure $M_{\star}$ values for the various galaxy
+sub-components.  To interpret these masses, we will need to know the
+magnification due to cluster lensing.  These values can be obtained
+from the strong lensing analysis of the clusters.  Question: does the
+magnification vary across the arcs?  Is this something we can hope to
+constrain?  
+
+ISEDFIT also produces best-fitting values of age, $Z$, star-formation
+timescale $\tau$, and dust reddening $E(B-V)$.  It will be interesting
+to compare the ages and star-formation timescales of different galaxy
+components as measured in the various apertures.  One goal is to
+constrain whether star formation in galaxies proceeds ``inside out''
+or ``outside in''.  Tying the different apertures to actual locations
+in the unlensed source will probably require deprojecting the lensed
+galaxies back to the source plane.  This information can presumably be
+obtained from the strong lensing analysis by other team members.
+
+Another interesting aspect of the resolved stellar population analysis
+will be to look for the presence of old stellar components,
+particularly in high redshift galaxies.  The detection of truly
+passive sub-components of high redshift galaxies might allow us to say
+interesting things about bulge formation in galaxies.  
+
+The stellar population information is sensitive to various
+age/$Z$/dust degeneracies.  It will be important to track and quantify
+these degeneracies, probably by looking at the full $\chi^2$
+distribution in multi-dimensional parameter space.  In particular, I
+think it will be interesting to explore the co-dependence of pairs of
+parameters (e.g., age-$Z$, age-$\tau$, age-dust) while marginalizing
+over other parameters.  
+
+Depending on how bad the $Z$-related degeneracies are, it might be
+possible to constrain the metallicities of different galaxy
+sub-components.  Of particular interest would be to compare the $Z$
+values of the most active star-forming regions with those of the older
+stellar components to look for evidence of the source of the gas in
+the star-forming knots.  Star formation that is triggered through
+pristine gas accretion or merging with gas-rich low-mass (and
+therefore low-$Z$) companions could produce low-$Z$ star-forming
+regions, while ongoing quiescent star formation or major mergers (with
+more equal mass and therefore more equal $Z$ companions) would
+presumably result in higher-$Z$ star forming regions.  
+
+\vspace{0.08in}
+\noindent{\bf{Ingredients:}}\vspace{-0.1in}
+\begin{enumerate}\itemsep-6pt
+\item {The ISEDFIT code package, with reasonable pre-computed model
+  grids.}
+\item {The total aperture photometry from \S\ref{apertures}, along
+  with errors.}
+\item {Magnification maps and source plane reconstructed morphologies
+  for the lensed galaxies from the strong lensing analysis by other
+  team members.}
+\end{enumerate}
+
+\noindent{\bf{Tasks:}}\vspace{-0.1in}
+\begin{enumerate}\itemsep-6pt
+\item {Decide which model grids to use for ISEDFIT.  If we want
+  anything other than the 3 pre-computed models for ISEDFIT, we will
+  need to produce them.}
+\item {Run ISEDFIT on the aperture photometry from \S\ref{apertures}.}
+\item {Explore the $\chi^2$ distribution in the multi-dimensional
+  input parameter space in order to constrain the various stellar
+  population modelling degeneracies.}
+\item {Do science!!!}
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%% Dust SED Fitting %%%%%%%%%%%%%%%%%
+
+\section{Fitting the Dust SED}\label{dust_fit}
+
+Some of the strongly-lensed background galaxies appear to be edge-on
+star forming galaxies with strong, patchy dust obscuration.  The
+16-band HST photometry of these resolved, extended objects makes this
+data set an ideal place to characterize the dust absorption SED in
+various targets and at various redshifts.  This second project will
+define obscured and un-obscured apertures within individual lensed
+galaxies and, by assuming that the intrinsic SED of the dust-obscured
+material is the same as that of the unobscured material, use the
+difference between the obscured and un-obscured SEDs to measure the
+SED of the dust absorption.  
+
+This is an entirely empirical comparison and therefore does not (in
+its simplest version) involve the use of ISEDFIT.  However, it might
+be very interesting to measure the dust SED as a function of host
+galaxy mass (and therefore presumably host galaxy $Z$), which would
+require $M_{\star}$ estimates from ISEDFIT.  Dealing with the heavily
+dust-obscured apertures in ISEDFIT might be complicated---we'd have to
+figure out how we would do that.
+
+
+\vspace{0.08in}
+\noindent{\bf{Ingredients:}}\vspace{-0.1in}
+\begin{enumerate}\itemsep-6pt
+\item {The total aperture photometry from \S\ref{apertures}, along
+  with errors.}
+\item {Magnification maps and source plane reconstructed morphologies
+  for the lensed galaxies from the strong lensing analysis by other
+  team members (only necessary if making $M_{\star}$ estimates).}
+\item {The ISEDFIT code package, with reasonable pre-computed model
+  grids (only necessary if making $M_{\star}$ estimates).}
+\end{enumerate}
+
+\noindent{\bf{Tasks:}}\vspace{-0.1in}
+\begin{enumerate}\itemsep-6pt
+\item {Construct the obscured and un-obscured galaxy SEDs.  Compare
+  them.}
+\item {Do science!!!}
+\end{enumerate}
+
+
+
+\end{document}

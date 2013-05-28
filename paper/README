@@ -1,0 +1,21 @@
+With the combination of all of the bands in CLASH, there are 
+many things that can be done in the study of the background 
+galaxies, particularly taking advantage of the magnifications 
+(even for galaxies that have not been multiply imaged), and 
+distortions.
+
+* photometric redshifts in general
+* spatially resolved pixel-by-pixel colors towards color-color diagrams
+* for galaxies at certain sweet-spot redshifts, the emission at certain
+  wavelengths based on narrow or medium band photometry vis a vis the overall
+  SED fit.  we can look at this in detail, and should map out predictions for
+  o Lyman alpha at redshifts z=...
+  o H alpha at redshifts z=...
+  o What other?
+  o Is it possible at any one redshift to see multiple emission lines across 
+    different filters? 
+  These can be used for mapping ionizing photons, emitting-light structure 
+  as compared to continuum-light structure (resonant scattering? morphologies?
+  locations of star formation in the merging or evolution process)
+
+

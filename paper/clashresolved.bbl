@@ -1,0 +1,8 @@
+\begin{thebibliography}{1}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Somerville} {et~al.}(2003){Somerville}, {Bullock}, \&
+  {Livio}}]{Somerville:2003aa}
+{Somerville}, R.~S., {Bullock}, J.~S., \& {Livio}, M. 2003, \apj, 593, 616
+
+\end{thebibliography}
